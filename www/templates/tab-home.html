@@ -1,0 +1,18 @@
+<ion-view view-title="Recent Openhouses">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="feedback in feedbacks" type="item-text-wrap" href="#/tab/feedback-view/{{feedback.id}}">
+        <!--img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p -->
+        {{feedback.location.address}}
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <!-- ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button -->
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
