@@ -29,6 +29,17 @@
 
 <ion-view view-title="Questions">
   <ion-content>
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Location
+        </div>
+        <select ng-model="locSelected" ng-options="loc.id as loc.address for loc in locations" ng-change='showSelected(locSelected)'></select>
+      </label>
+
+    </div>
+
     <ion-list>
       <ion-item ng-repeat="question in questions track by $index" type="item-text-wrap">
         <h2>{{question.question}}</h2>

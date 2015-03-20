@@ -25,6 +25,7 @@ angular.module('starter.controllers', [])
 	$scope.questions = Questions.all();
 
 	$scope.locations = Locations.all();
+	$scope.locSelected='';
 
 	$scope.feed = {id : null,
       		locationId : null, 
@@ -34,6 +35,10 @@ angular.module('starter.controllers', [])
 		$scope.feed = Feedbacks.findById(feedId);
 		
 	} 
+
+	$scope.showSelected = function(item) {
+		console.log(item);
+	}
 
 })
 
